@@ -30,9 +30,10 @@ def main(config_path):
     parsing_results = model_table_parsing.predict(input_data, result_path)
 
 
-    print('Table Parsing results are as follows:')
-    for id, result in enumerate(parsing_results):
-        print(str(id+1)+':\n', result)
+    print("Table Parsing results are as follows:")
+    for i, (img_path, latex_code) in enumerate(parsing_results.items(), 1):
+        print(f"{i}:\n Image: {img_path}\n LaTeX:\n{latex_code}\n")
+
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@ inputs: assets/demo/table_parsing
 outputs: outputs/table_parsing
 tasks:
   table_parsing:
-    model: table_parsing_struct_eqtable
+    model: table_parsing_cpu
     model_config:
       model_path: models/TabRec/StructEqTable
       max_new_tokens: 1024
